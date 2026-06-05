@@ -35,3 +35,58 @@ rootless containers dont have ip's but work with ports only
 
 sudo podman inspect -l -f "{{.NetworkSettings.IPAddress }}"
 10.88.0.2
+
+
+
+#################################################################
+
+Container Management 
+
+podman ps -a : shows current and past running containers 
+podman stop : stops a running container 
+podman start : starts a container that was started previsouly 
+podman inspect : shows properties used by containers and images 
+podman exec -it containername sh : runs an additional shell , secondary process
+ctrl-p , ctrl q : detaches from a current interactive session 
+
+a container comes from an image 
+
+Using variables 
+
+-e key =value 
+
+podman logs containername 
+
+
+exit status 
+
+0 = nothing is wrong - success
+1 = something is wrong 
+
+
+man podman run 
+podman run --help 
+
+
+####################################################
+
+podman networking 
+
+- use podman network ls to see current networks
+- to start containers in different namespace use , podman network create  
+- traffic between networks is blocked 
+- rootless containers dont have ip address
+
+#######################################################
+
+accessing containers 
+
+- containers cannot be reached by external users 
+- To access a container a port can be exposed 
+- port forwarding , podman run -d -p 127.0.0.1:8080:80 nginx 
+- HOST_PORT : 8080
+- CONTAINER_PORT: 80 
+
+#################################################
+
+Restrict containers 
