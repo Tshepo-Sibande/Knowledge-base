@@ -1,0 +1,8 @@
+Using image registries 
+
+podman search IMAGE
+podman pull IMAGE
+podman images
+podman login REGISTRY
+podman inspect IMAGE
+podman rmi IMAGE
