@@ -1,1 +1,14 @@
-testingfiles
+podman search IMAGE
+podman pull IMAGE
+podman images
+podman login REGISTRY
+podman inspect IMAGE
+podman rmi IMAGE
+
+pulling images 
+
+podman image tree imagename:latest 
+podman image list : lists available images
+podman image inspect : shows image details
+podman image rm : removes specific images
+podman image prune : removes unused images 
