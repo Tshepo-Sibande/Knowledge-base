@@ -12,3 +12,12 @@ podman image list : lists available images
 podman image inspect : shows image details
 podman image rm : removes specific images
 podman image prune : removes unused images 
+
+creating custom images 
+
+  - Build from scatch using Containerfile
+  - create using buildah 
+
+Using tags 
+
+ - a tag is a label used to identify a container image 
